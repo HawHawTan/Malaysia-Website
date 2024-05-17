@@ -59,10 +59,12 @@ p {
 nav{
 	display: flex;
 	position: absolute;
-	/* right: 0;
-	left: 0; */
-	justify-content:center;
+	right: 0;
+	left: 0;
+	justify-content:space-between;
 	z-index: 999;
+	padding: 0 1rem;
+	/* margin: 0 1rem; */
 
 }
 ul {
@@ -70,6 +72,7 @@ ul {
 	justify-content: space-around;
 	padding: 1rem 0;
 	/* z-index: 2; */
+	gap: 1rem;
 }
 li {
 	list-style: none;
