@@ -22,20 +22,18 @@
 
 /* Typography
 --------------------------------------------- */
-:root{
-	--black: black;
-	--white: white;
-	--light_black: rgb(0, 0, 0, 0.3);
+:root {
+  --black: black;
+  --white: white;
+  --light_black: rgb(0, 0, 0, 0.3);
 }
 body {
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.5;
-	color: var(--white);
-	
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--white);
 }
-
 
 h1,
 h2,
@@ -43,116 +41,74 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
+  margin: 0;
 }
-/* can i use % for top help*/
-h1{
-	z-index: 1;
-	margin: 0 2rem;
-	font-size: 3rem;
+h1 {
+  z-index: 1;
+  margin: 0 2rem;
+  font-size: 3rem;
 }
 
 p {
-	
 }
 @media (min-width: 40em) {
-
-	h1{
-		right: 33%;
-		font-size: 7rem;
-	}
+  h1 {
+    right: 33%;
+    font-size: 7rem;
+  }
 }
 
 /* Elements
 --------------------------------------------- */
-
-/* not sure if i put the nav here help*/
-nav{
-	display: flex;
-	position: absolute;
-	right: 0;
-	left: 0;
-	justify-content: space-between;
-	z-index: 999;
-	padding:0.5rem;
-
-}
-
-/* can i use %  help*/
-ul {
-	display: flex;
-	justify-content: space-around;
-	padding: 1rem 0;
-	gap: 1rem;
-	width: 80%;
-}
-li {
-	list-style: none;
- }			
-
 dl {
-	
 }
 
 figure {
-	
 }
 
 table {
-	
 }
 
 /* Links
 --------------------------------------------- */
 a {
-	text-decoration: none;
-	color: var(--white);
-	font-size: 1rem;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1rem;
+  transition: all ease-in-out 0.2s;
 }
 
-/*do we need to use all of this? help */
 a:visited {
-	
+  color: var(--white);
 }
 
-/* need help with scale, also why does it go back so fast help*/
 a:hover {
-	/* font-size: 2rem; */
-	/* transform: scale(1.2);
-	transition: all ease-in-out 0.8s; */
+  font-size: 2rem;
+  /* transform: scale(1.2); */
 }
 
 a:focus {
-	
 }
 
 a:active {
-	
 }
 
 /* homepage */
 @media (min-width: 40em) {
-	a:hover {
-		transform: scale(1.2);
-		/* font-size: 2rem; */
-		transition: all ease-in-out 0.8s;
-	}
-	/* can i use %  help*/
-	ul{
-		width: 40%;
-	}
+  a:hover {
+    transform: scale(1.1);
+    /* font-size: 2rem; */
+    transition: all 0.5s ease-in-out;
+  }
 
-	a{
-		font-size: 1.3rem;
-	}
-	
+  a {
+    font-size: 1.3rem;
+  }
 }
 
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-
-
 
 /*--------------------------------------------------------------
 # Components
@@ -160,200 +116,229 @@ a:active {
 
 /* Header
 --------------------------------------------- */
-svg{
-	height: 5rem;
-	width: 5rem;	
+nav {
+  display: flex;
+  position: absolute;
+  right: 0;
+  left: 0;
+  justify-content: space-between;
+  z-index: 999;
+  padding: 0.5rem;
+}
+.twin-tower {
+height: 5rem;
+  width: 5rem;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  gap: 1rem;
+  /* width: 90%; */
+}
+li {
+  list-style: none;
 }
 
 
+@media (min-width: 55em) {
+  ul {
+    padding-right: 2rem;
+    gap: 4rem;
+  }
+}
 /* Main
 --------------------------------------------- */
 /* Homepage */
 
-/* start or end help */
-.video-with-title{
-	position: relative;
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	height: 100vh;
+.video-with-title {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
 }
 
-video{
-	position: absolute;
-	width: 100%;
-	object-fit:cover;
-	object-position: center;
-	display: block;
-	/* filter: opacity(.9); */
-	overflow: hidden;
-	height: 100vh;
+video {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  /* filter: opacity(.9); */
+  overflow: hidden;
+  height: 100vh;
 }
 
-.video-with-title::after{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	background-color: var(--light_black);
+.video-with-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--light_black);
 }
 
-/* check my vh help*/
-.homepage{
-	height: 220vh;
-	background-color: var(--black);
-	padding: 2rem;
+.homepage {
+  /* height: 220vh */
+  background-color: var(--black);
+  padding: 2rem;
+  position: relative;
+  
 }
 
-.introduction{
-	font-size: 2rem;
+.introduction {
+  font-size: 2rem;
 }
-.topic{
-	display: flex ;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.topic blockquote {
-	margin:0;
-	text-align: center;
+.topic {
+  display: flex;
+  flex-direction: column;
 }
 
-.topic blockquote p {
-	text-align: center;
-	width: 100%;
+.content-right,
+.content-left {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-right div,
+.content-left div {
+  align-self: center;
+}
+
+.content p {
+  text-align: center;
+  width: 100%;
 }
 
 /* might want to fix the image */
-/* resize img help */
-.blockquote-img-1{
-	width: 100%;
-	height: 20rem;
-	border-radius: 20px;
-	object-fit: cover;
-}
-/* resize img help */
-.blockquote-img-2{
-	border-radius: 20px;
-	object-fit: cover;
-	object-position: bottom;
+.blockquote-img {
+  height: 20rem;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: left bottom;
 }
 
-/* is this the right way of doing it? help */
-blockquote p{
-	width: 12rem;
+blockquote p {
+  /* width: 12rem; */
 }
 
-@media (min-width: 40em) {
-	.video-with-title{
-		justify-content: center;
-	}
-	/* is this right? help */
-	.homepage{
-		height: 110vh;
-	}
-	/* margin need fix help*/
-	.homepage-wrapper{
-		margin: 5rem;
-		width: 60%;
-		margin:0 auto;
-		padding-top: 7rem;
-	}
+.up-arrow{
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
+	background-color: green;
+}
 
-	.introduction{
-		text-align: center;
-	}
+/* Homepage */
+@media (min-width: 55em) {
+  .video-with-title {
+    justify-content: center;
+  }
 
-	.homepage-wrapper p {
-		font-size: 1.2rem;
-	}
+  .homepage {
+    padding: 0;
+  }
 
-	.topic{
-		justify-content: space-evenly;
-		flex-direction: row;
-		padding: 3rem;
-	}
+  .homepage-wrapper {
+    /* margin: 5rem; */
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-top: 7rem;
+  }
 
-	.topic h3{
-		font-size: 2rem;
-	}
+  .introduction {
+    text-align: center;
+  }
 
-	.blockquote-img-1{
-		width: 20rem;
-		height: 16rem;
-		border-radius: 20px;
-		object-fit: cover;
-	}
+  .homepage-wrapper p {
+    font-size: 1.2rem;
+  }
 
-	
-	.blockquote-img-2{
-		width: 20rem;
-		height: 16rem;
-		border-radius: 20px;
-		object-fit: cover;
-        object-position: bottom;
-	}
+  .topic {
+    /* justify-content: space-evenly; */
+    flex-direction: column;
+    padding-top: 2rem;
+  }
 
-	/* is this the right way of doing it? help */
-	blockquote p{
-		width: 22rem;
-		font-size: 1.3rem;
-	}	
+  .content-right,
+  .content-left {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content-right,
+  .content-left h3 {
+    font-size: 2rem;
+  }
+
+  .content-left {
+    flex-direction: row-reverse;
+  }
+
+  .blockquote-img {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .topic div p {
+    width: 22rem;
+    font-size: 1.3rem;
+  }
 }
 
 /* Food */
-.title-picture{
-	display:flex;
-	justify-content: center;
-	/* background-color: var(--black); */
-	height: 100vh;
-	background-color: var(--light_black);  	
+.title-picture {
+  display: flex;
+  justify-content: center;
+  /* background-color: var(--black); */
+  height: 100vh;
+  background-color: var(--light_black);
 }
 
-.title-picture h1{
-	align-content: center;
+.title-picture h1 {
+  align-content: center;
 }
 
-
-/* can i use % help */
-.title-picture::after{
-	content: "";
-	position: fixed;
-	top: 0;
-	height: 100vh;
-	max-width: 100vw;
-	left: 0;
-	right: 0;
-	z-index: -1;
-	background: url(/photo/food/night-life.jpg);
-	background-size: cover;
-	background-position: 10%;
+.title-picture::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  max-width: 100vw;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: url("../photo/food/night-life.jpg");
+  background-size: cover;
+  background-position: 10%;
 }
-
 
 /* Footer
 --------------------------------------------- */
-footer{
-	background-color: var(--black);
+footer {
+  background-color: var(--black);
 }
 
-/*can i use p or do i need to make a class name help */
 footer p {
-	margin: 0;
-	text-align: center;
-	font-size: .8rem;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 40em) {
-	footer{
-		padding-top: 4rem;
-	}
-	footer p{
-		font-size: 1.3rem;
-		padding: 1rem;
-	}
+  footer {
+    padding-top: 4rem;
+  }
+  footer p {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
 }
