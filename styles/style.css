@@ -53,7 +53,6 @@ p {
 }
 @media (min-width: 40em) {
   h1 {
-    right: 33%;
     font-size: 7rem;
   }
 }
@@ -75,7 +74,7 @@ a {
   text-decoration: none;
   color: var(--white);
   font-size: 1rem;
-  transition: all ease-in-out 0.2s;
+ 
 }
 
 a:visited {
@@ -83,7 +82,6 @@ a:visited {
 }
 
 a:hover {
-  font-size: 2rem;
   /* transform: scale(1.2); */
 }
 
@@ -94,16 +92,16 @@ a:active {
 }
 
 /* homepage */
-@media (min-width: 40em) {
-  a:hover {
-    transform: scale(1.1);
-    /* font-size: 2rem; */
-    transition: all 0.5s ease-in-out;
-  }
-
-  a {
-    font-size: 1.3rem;
-  }
+@media (min-width: 55em) {
+	a {
+		font-size: 1.3rem;
+		transition: all ease-in-out 0.2s;
+	}
+	a:hover {  
+		font-size: 2rem;
+		/* font-size: 2rem; */
+		transition: all 0.5s ease-in-out;
+  	}
 }
 
 /*--------------------------------------------------------------
@@ -182,50 +180,47 @@ video {
   background-color: var(--light_black);
 }
 
-.homepage {
-  /* height: 220vh */
+.homepage 
+{
   background-color: var(--black);
   padding: 2rem;
   position: relative;
-  
 }
 
 .introduction {
   font-size: 2rem;
 }
-.topic {
-  display: flex;
-  flex-direction: column;
+
+blockquote{
+	padding: 1rem 0;
+	margin: 0;
 }
+
 
 .content-right,
 .content-left {
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  margin: 2rem 0;
 }
 
-.content-right div,
-.content-left div {
-  align-self: center;
+
+.content{
+  margin: 2rem 0;
 }
 
-.content p {
-  text-align: center;
-  width: 100%;
+.night-market-img {
+	height: 20rem;
+	border-radius: 20px;
+	object-fit: cover;
+	object-position: left;
 }
 
-/* might want to fix the image */
-.blockquote-img {
-  height: 20rem;
-  border-radius: 20px;
-  object-fit: cover;
-  object-position: left bottom;
-}
-
-blockquote p {
-  /* width: 12rem; */
+/* idk why i need 100% width but not night market*/
+.building-img{
+	height: 20rem;
+	width: 100%;
+	border-radius: 20px;
+	object-fit: cover;
+	object-position: bottom;
 }
 
 .up-arrow{
@@ -246,7 +241,6 @@ blockquote p {
   }
 
   .homepage-wrapper {
-    /* margin: 5rem; */
     max-width: 60rem;
     margin: 0 auto;
     padding-top: 7rem;
@@ -261,19 +255,19 @@ blockquote p {
   }
 
   .topic {
-    /* justify-content: space-evenly; */
     flex-direction: column;
     padding-top: 2rem;
   }
 
   .content-right,
   .content-left {
+	display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
-  .content-right,
-  .content-left h3 {
+  .content-right a h3,
+  .content-left a h3 {
     font-size: 2rem;
   }
 
@@ -281,11 +275,10 @@ blockquote p {
     flex-direction: row-reverse;
   }
 
-  .blockquote-img {
+  .night-market-img,.building-img {
     width: 20rem;
     height: 25rem;
-    border-radius: 20px;
-    object-fit: cover;
+    
   }
 
   .topic div p {
