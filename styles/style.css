@@ -288,19 +288,19 @@ blockquote{
 }
 
 /* Food */
-.title-picture {
+/* background color is not fully help */
+.hero-picture {
   display: flex;
   justify-content: center;
-  /* background-color: var(--black); */
   height: 100vh;
   background-color: var(--light_black);
 }
 
-.title-picture h1 {
+.hero-picture h1 {
   align-content: center;
 }
 
-.title-picture::after {
+.hero-picture::after {
   content: "";
   position: fixed;
   top: 0;
@@ -312,6 +312,19 @@ blockquote{
   background: url("../photo/food/night-life.jpg");
   background-size: cover;
   background-position: 10%;
+}
+
+.food-picture{
+  background-color: var(--black);
+}
+.list-of-food{
+  padding-bottom: 1rem;
+}
+
+.list-of-food img{
+  height: 10rem;
+  width: 20rem;
+  object-fit: cover;
 }
 
 /* Footer
