@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/normalize-fwd.css" />
     <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <title>Malaysia</title>
   </head>
   <body>
     <header>
       <nav>
-        <a href="index.html"><img class="twin-tower" src="twin tower7.svg" alt=" twin tower"></a>
+        <a href="index.html"
+          ><img
+            class="twin-tower"
+            src="favicon/twinTower-ht.svg"
+            alt=" twin tower"
+        /></a>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="food.html">Food</a></li>
@@ -39,69 +49,77 @@
         <div class="homepage-wrapper">
           <h2 class="introduction">Introduction</h2>
           <blockquote>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit
-            sequi itaque nihil quo? Facilis soluta in dignissimos fuga
-            voluptate, non eum a velit placeat, iure quae similique aperiam
-            porro? Repudiandae soluta minus, cupiditate sit illo magni
-            accusantium quisquam voluptas amet reiciendis porro vel hic odio ea
-            ex doloribus eveniet suscipit recusandae odit distinctio in et.
-            Laborum aperiam dolorem ab. Voluptatum necessitatibus consectetur
-            eveniet repellendus porro numquam tenetur perferendis quaerat
-            laudantium, voluptates, nesciunt cum nemo inventore facilis aliquam.
-            Quis sit qui fugiat quo quaerat dicta ipsa officia suscipit
-            cupiditate sed. 
-            <!-- can i have two br help -->
-            <br>
-            <br>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit
+              sequi itaque nihil quo? Facilis soluta in dignissimos fuga
+              voluptate, non eum a velit placeat, iure quae similique aperiam
+              porro? Repudiandae soluta minus, cupiditate sit illo magni
+              accusantium quisquam voluptas amet reiciendis porro vel hic odio
+              ea ex doloribus eveniet suscipit recusandae odit distinctio in et.
+              Laborum aperiam dolorem ab. Voluptatum necessitatibus consectetur
+              eveniet repellendus porro numquam tenetur perferendis quaerat
+              laudantium, voluptates, nesciunt cum nemo inventore facilis
+              aliquam. Quis sit qui fugiat quo quaerat dicta ipsa officia
+              suscipit cupiditate sed.
+            </p>
             <cite>Brave New World</cite>
           </blockquote>
 
-          <!-- section -->
-          <section class="topic">
-            <article class="content-right" >
+          <div class="topic">
+            <!-- change to just 1 a tag for each article -->
+            <article class="content-right">
               <a href="food.html">
                 <img
                   class="night-market-img"
                   src="photo/food/night-life.jpg"
                   alt="night life"
                 />
+                <!-- </a> -->
+                <div class="content">
+                  <h3>Food</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Natus, sint iure cupiditate modi adipisci eveniet culpa
+                    iusto eos similique ab aliquam rem, quibusdam labore minima
+                    delectus voluptates dolorum suscipit consectetur!
+                  </p>
+                </div>
               </a>
-              <!-- can i have this div help-->
-              <div class="content">
-              <a  href="food.html">
-                <h3>Food</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Natus, sint iure cupiditate modi adipisci eveniet culpa iusto
-                  eos similique ab aliquam rem, quibusdam labore minima delectus
-                  voluptates dolorum suscipit consectetur!
-                </p> 
-              </a>
-              </div>
             </article>
 
             <article class="content-left">
               <a href="culture.html">
-                <img class="building-img" 
-                src="photo/building/Jonker Street Night Market.jpg"
-                alt="street night market"
+                <img
+                  class="building-img"
+                  src="photo/building/Jonker-Street-Night-Market.jpg"
+                  alt="street night market"
                 />
-              </a>
-              <!-- can i have this div help-->
               <div class="content">
                 <a href="culture.html">
                   <h3>Culture</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Natus, sint iure cupiditate modi adipisci eveniet culpa iusto
-                    eos similique ab aliquam rem, quibusdam labore minima delectus
-                    voluptates dolorum suscipit consectetur!
+                    Natus, sint iure cupiditate modi adipisci eveniet culpa
+                    iusto eos similique ab aliquam rem, quibusdam labore minima
+                    delectus voluptates dolorum suscipit consectetur!
                   </p>
                 </a>
               </div>
             </article>
-            <a class="up-arrow" href="#home">up</a>
-          </section>
+            <a class="up-arrow" href="#home">
+              <svg
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+                stroke-linejoin="round"
+                stroke-miterlimit="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m11.998 21.995c5.517 0 9.997-4.48 9.997-9.997 0-5.518-4.48-9.998-9.997-9.998-5.518 0-9.998 4.48-9.998 9.998 0 5.517 4.48 9.997 9.998 9.997zm0-1.5c-4.69 0-8.498-3.807-8.498-8.497s3.808-8.498 8.498-8.498 8.497 3.808 8.497 8.498-3.807 8.497-8.497 8.497zm4.845-6.711c.108.141.157.3.157.456 0 .389-.306.755-.749.755h-8.501c-.445 0-.75-.367-.75-.755 0-.157.05-.316.159-.457 1.203-1.554 3.252-4.199 4.258-5.498.142-.184.36-.29.592-.29.23 0 .449.107.591.291zm-7.564-.289h5.446l-2.718-3.522z"
+                  fill-rule="nonzero"
+                /></svg></a>
+          </div>
         </div>
       </section>
     </main>

@@ -74,7 +74,6 @@ a {
   text-decoration: none;
   color: var(--white);
   font-size: 1rem;
- 
 }
 
 a:visited {
@@ -92,17 +91,6 @@ a:active {
 }
 
 /* homepage */
-@media (min-width: 55em) {
-	a {
-		font-size: 1.3rem;
-		transition: all ease-in-out 0.2s;
-	}
-	a:hover {  
-		font-size: 2rem;
-		/* font-size: 2rem; */
-		transition: all 0.5s ease-in-out;
-  	}
-}
 
 /*--------------------------------------------------------------
 # Layout
@@ -121,11 +109,14 @@ nav {
   left: 0;
   justify-content: space-between;
   z-index: 999;
+  align-items: center;
   padding: 0.5rem;
 }
+
 .twin-tower {
-height: 5rem;
-  width: 5rem;
+  height: 3.4rem;
+  width: 4rem;
+  /* margin: 0; */
 }
 ul {
   display: flex;
@@ -138,11 +129,20 @@ li {
   list-style: none;
 }
 
-
 @media (min-width: 55em) {
   ul {
     padding-right: 2rem;
     gap: 4rem;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+    transition: all ease-in-out 0.2s;
+  }
+  nav a:hover {
+    /* font-size: 2rem; */
+    font-size: 2rem;
+    transition: all 0.5s ease-in-out;
   }
 }
 /* Main
@@ -180,8 +180,7 @@ video {
   background-color: var(--light_black);
 }
 
-.homepage 
-{
+.homepage {
   background-color: var(--black);
   padding: 2rem;
   position: relative;
@@ -191,63 +190,64 @@ video {
   font-size: 2rem;
 }
 
-blockquote{
-	padding: 1rem 0;
-	margin: 0;
+blockquote {
+  padding: 1rem 0;
+  margin: 0;
 }
-
 
 .content-right,
 .content-left {
   margin: 2rem 0;
 }
 
-
-.content{
+.content {
   margin: 2rem 0;
 }
 
 .night-market-img {
-	height: 20rem;
-	border-radius: 20px;
-	object-fit: cover;
-	object-position: left;
+  height: 20rem;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: left;
 }
 
-/* idk why i need 100% width but not night market*/
-.building-img{
-	height: 20rem;
-	width: 100%;
-	border-radius: 20px;
-	object-fit: cover;
-	object-position: bottom;
+.building-img {
+  height: 20rem;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: bottom;
 }
 
-.up-arrow{
-	position: absolute;
-	right: 1rem;
-	bottom: 1rem;
-	background-color: green;
+.up-arrow {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  /* background-color: var(--white); */
 }
 
-/* Homepage */
+.up-arrow svg {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+
+/* Homepage media */
 @media (min-width: 55em) {
   .video-with-title {
     justify-content: center;
   }
 
-  .homepage {
-    padding: 0;
-  }
-
   .homepage-wrapper {
     max-width: 60rem;
     margin: 0 auto;
-    padding-top: 7rem;
+    padding: 1rem;
+    /* padding-top: 7rem; */
   }
 
   .introduction {
     text-align: center;
+    font-size: 3rem;
   }
 
   .homepage-wrapper p {
@@ -259,9 +259,10 @@ blockquote{
     padding-top: 2rem;
   }
 
-  .content-right,
+  /* double check before applying to culture */
+  .content-right a,
   .content-left {
-	display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -275,20 +276,27 @@ blockquote{
     flex-direction: row-reverse;
   }
 
-  .night-market-img,.building-img {
+  .night-market-img,
+  .building-img {
     width: 20rem;
     height: 25rem;
-    
   }
 
   .topic div p {
     width: 22rem;
     font-size: 1.3rem;
   }
+
+  .up-arrow {
+    bottom: -2em;
+  }
+  .up-arrow svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 
 /* Food */
-/* background color is not fully help */
 .hero-picture {
   display: flex;
   justify-content: center;
@@ -314,17 +322,58 @@ blockquote{
   background-position: 10%;
 }
 
-.food-picture{
-  background-color: var(--black);
-}
-.list-of-food{
-  padding-bottom: 1rem;
+.popular {
+  font-size: 2rem;
 }
 
-.list-of-food img{
+/* why do i need this? help */
+.list-of-food {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.list-of-food img {
   height: 10rem;
   width: 20rem;
+  border-radius: 10px;
   object-fit: cover;
+}
+
+/* food media */
+@media (min-width: 35em) {
+  .popular {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .list-of-food {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-content: center;
+    /* justify-content: center; */
+    margin: 2rem;
+  }
+
+  /* .list-of-food figure:nth-of-type(odd) {
+    grid-column: 1/3;
+  } */
+
+  .list-of-food figure {
+    justify-self: center;
+  }
+
+  .list-of-food img {
+    height: 14rem;
+    width: 22rem;
+  }
+}
+
+/* culture */
+.culture-hero-picture::after {
+  background: url("../photo/building/kuala-lumpur.jpg");
+  background-size: cover;
+  background-position: 30% top;
 }
 
 /* Footer
@@ -340,9 +389,7 @@ footer p {
 }
 
 @media (min-width: 40em) {
-  footer {
-    padding-top: 4rem;
-  }
+
   footer p {
     font-size: 1.3rem;
     padding: 1rem;
