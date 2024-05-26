@@ -53,7 +53,6 @@ p {
 }
 @media (min-width: 40em) {
   h1 {
-    right: 33%;
     font-size: 7rem;
   }
 }
@@ -75,7 +74,6 @@ a {
   text-decoration: none;
   color: var(--white);
   font-size: 1rem;
-  transition: all ease-in-out 0.2s;
 }
 
 a:visited {
@@ -83,7 +81,6 @@ a:visited {
 }
 
 a:hover {
-  font-size: 2rem;
   /* transform: scale(1.2); */
 }
 
@@ -94,17 +91,6 @@ a:active {
 }
 
 /* homepage */
-@media (min-width: 40em) {
-  a:hover {
-    transform: scale(1.1);
-    /* font-size: 2rem; */
-    transition: all 0.5s ease-in-out;
-  }
-
-  a {
-    font-size: 1.3rem;
-  }
-}
 
 /*--------------------------------------------------------------
 # Layout
@@ -123,11 +109,14 @@ nav {
   left: 0;
   justify-content: space-between;
   z-index: 999;
+  align-items: center;
   padding: 0.5rem;
 }
+
 .twin-tower {
-height: 5rem;
-  width: 5rem;
+  height: 3.4rem;
+  width: 4rem;
+  /* margin: 0; */
 }
 ul {
   display: flex;
@@ -140,11 +129,20 @@ li {
   list-style: none;
 }
 
-
 @media (min-width: 55em) {
   ul {
     padding-right: 2rem;
     gap: 4rem;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+    transition: all ease-in-out 0.2s;
+  }
+  nav a:hover {
+    /* font-size: 2rem; */
+    font-size: 2rem;
+    transition: all 0.5s ease-in-out;
   }
 }
 /* Main
@@ -183,77 +181,73 @@ video {
 }
 
 .homepage {
-  /* height: 220vh */
   background-color: var(--black);
   padding: 2rem;
   position: relative;
-  
 }
 
 .introduction {
   font-size: 2rem;
 }
-.topic {
-  display: flex;
-  flex-direction: column;
+
+blockquote {
+  padding: 1rem 0;
+  margin: 0;
 }
 
 .content-right,
 .content-left {
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  margin: 2rem 0;
 }
 
-.content-right div,
-.content-left div {
-  align-self: center;
+.content {
+  margin: 2rem 0;
 }
 
-.content p {
-  text-align: center;
-  width: 100%;
-}
-
-/* might want to fix the image */
-.blockquote-img {
+.night-market-img {
   height: 20rem;
   border-radius: 20px;
   object-fit: cover;
-  object-position: left bottom;
+  object-position: left;
 }
 
-blockquote p {
-  /* width: 12rem; */
+.building-img {
+  height: 20rem;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: bottom;
 }
 
-.up-arrow{
-	position: absolute;
-	right: 1rem;
-	bottom: 1rem;
-	background-color: green;
+.up-arrow {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  /* background-color: var(--white); */
 }
 
-/* Homepage */
+.up-arrow svg {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+
+/* Homepage media */
 @media (min-width: 55em) {
   .video-with-title {
     justify-content: center;
   }
 
-  .homepage {
-    padding: 0;
-  }
-
   .homepage-wrapper {
-    /* margin: 5rem; */
     max-width: 60rem;
     margin: 0 auto;
-    padding-top: 7rem;
+    padding: 1rem;
+    /* padding-top: 7rem; */
   }
 
   .introduction {
     text-align: center;
+    font-size: 3rem;
   }
 
   .homepage-wrapper p {
@@ -261,19 +255,20 @@ blockquote p {
   }
 
   .topic {
-    /* justify-content: space-evenly; */
     flex-direction: column;
     padding-top: 2rem;
   }
 
-  .content-right,
+  /* double check before applying to culture */
+  .content-right a,
   .content-left {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
-  .content-right,
-  .content-left h3 {
+  .content-right a h3,
+  .content-left a h3 {
     font-size: 2rem;
   }
 
@@ -281,33 +276,39 @@ blockquote p {
     flex-direction: row-reverse;
   }
 
-  .blockquote-img {
+  .night-market-img,
+  .building-img {
     width: 20rem;
     height: 25rem;
-    border-radius: 20px;
-    object-fit: cover;
   }
 
   .topic div p {
     width: 22rem;
     font-size: 1.3rem;
   }
+
+  .up-arrow {
+    bottom: -2em;
+  }
+  .up-arrow svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 
 /* Food */
-.title-picture {
+.hero-picture {
   display: flex;
   justify-content: center;
-  /* background-color: var(--black); */
   height: 100vh;
   background-color: var(--light_black);
 }
 
-.title-picture h1 {
+.hero-picture h1 {
   align-content: center;
 }
 
-.title-picture::after {
+.hero-picture::after {
   content: "";
   position: fixed;
   top: 0;
@@ -319,6 +320,60 @@ blockquote p {
   background: url("../photo/food/night-life.jpg");
   background-size: cover;
   background-position: 10%;
+}
+
+.popular {
+  font-size: 2rem;
+}
+
+/* why do i need this? help */
+.list-of-food {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.list-of-food img {
+  height: 10rem;
+  width: 20rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* food media */
+@media (min-width: 35em) {
+  .popular {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .list-of-food {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-content: center;
+    /* justify-content: center; */
+    margin: 2rem;
+  }
+
+  /* .list-of-food figure:nth-of-type(odd) {
+    grid-column: 1/3;
+  } */
+
+  .list-of-food figure {
+    justify-self: center;
+  }
+
+  .list-of-food img {
+    height: 14rem;
+    width: 22rem;
+  }
+}
+
+/* culture */
+.culture-hero-picture::after {
+  background: url("../photo/building/kuala-lumpur.jpg");
+  background-size: cover;
+  background-position: 30% top;
 }
 
 /* Footer
@@ -334,9 +389,7 @@ footer p {
 }
 
 @media (min-width: 40em) {
-  footer {
-    padding-top: 4rem;
-  }
+
   footer p {
     font-size: 1.3rem;
     padding: 1rem;
