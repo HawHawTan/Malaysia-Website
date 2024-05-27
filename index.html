@@ -6,21 +6,23 @@
     <link rel="stylesheet" href="styles/normalize-fwd.css" />
     <link rel="stylesheet" href="styles/style.css" />
 
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="manifest" href="site.webmanifest" />
+    <link rel="icon" href="favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <title>Malaysia</title>
   </head>
   <body>
     <header>
       <nav>
-        <a href="index.html"
-          ><img
-            class="twin-tower"
-            src="favicon/twinTower-ht.svg"
-            alt=" twin tower"
-        /></a>
+        <a href="index.html">
+          <img class="twin-tower" src="favicon/twinTower-ht.svg" alt="Icon of twin towers linking to the homepage" />
+        </a>
+        <a href="#homepage" class="skip">Skip to main content</a>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="food.html">Food</a></li>
@@ -29,23 +31,16 @@
         </ul>
       </nav>
     </header>
-    <!-- https://jonathonleathers.com/how-to-add-a-favicon/ -->
-    <!-- To-do
-        - icon needs to go home
-        - font
-        - find more pictures
-        - going back on top
-        - sort my favicon
-        
-    -->
+
     <main id="home">
-      <header class="video-with-title">
+      <section class="video-with-title">
         <video autoplay loop muted>
-          <source src="videos/malaysia_vid.mp4" type="video/mp4" />
+          <source src="video/malaysia_vid.mov" type="video/mp4" />
         </video>
         <h1>Malaysia</h1>
-      </header>
-      <section class="homepage">
+      </section>
+
+      <section id="homepage" class="homepage" >
         <div class="homepage-wrapper">
           <h2 class="introduction">Introduction</h2>
           <blockquote>
@@ -66,15 +61,9 @@
           </blockquote>
 
           <div class="topic">
-            <!-- change to just 1 a tag for each article -->
             <article class="content-right">
               <a href="food.html">
-                <img
-                  class="night-market-img"
-                  src="photo/food/night-life.jpg"
-                  alt="night life"
-                />
-                <!-- </a> -->
+                <img class="introduction-img night-market-img" src="photo/food/night-life.jpg" alt="Night market scene in Malaysia" />
                 <div class="content">
                   <h3>Food</h3>
                   <p>
@@ -89,13 +78,8 @@
 
             <article class="content-left">
               <a href="culture.html">
-                <img
-                  class="building-img"
-                  src="photo/building/Jonker-Street-Night-Market.jpg"
-                  alt="street night market"
-                />
-              <div class="content">
-                <a href="culture.html">
+                <img class="introduction-img building-img" src="photo/building/Jonker-Street-Night-Market.jpg" alt="Building at Jonker Street Night Market in Malaysia" />
+                <div class="content">
                   <h3>Culture</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -103,26 +87,22 @@
                     iusto eos similique ab aliquam rem, quibusdam labore minima
                     delectus voluptates dolorum suscipit consectetur!
                   </p>
-                </a>
-              </div>
+                </div>
+              </a>
             </article>
+
             <a class="up-arrow" href="#home">
-              <svg
-                clip-rule="evenodd"
-                fill-rule="evenodd"
-                stroke-linejoin="round"
-                stroke-miterlimit="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m11.998 21.995c5.517 0 9.997-4.48 9.997-9.997 0-5.518-4.48-9.998-9.997-9.998-5.518 0-9.998 4.48-9.998 9.998 0 5.517 4.48 9.997 9.998 9.997zm0-1.5c-4.69 0-8.498-3.807-8.498-8.497s3.808-8.498 8.498-8.498 8.497 3.808 8.497 8.498-3.807 8.497-8.497 8.497zm4.845-6.711c.108.141.157.3.157.456 0 .389-.306.755-.749.755h-8.501c-.445 0-.75-.367-.75-.755 0-.157.05-.316.159-.457 1.203-1.554 3.252-4.199 4.258-5.498.142-.184.36-.29.592-.29.23 0 .449.107.591.291zm-7.564-.289h5.446l-2.718-3.522z"
-                  fill-rule="nonzero"
-                /></svg></a>
+              <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Back to Top</title>
+                <desc>Arrow icon to scroll back to the top of the page</desc>
+                <path d="m11.998 21.995c5.517 0 9.997-4.48 9.997-9.997 0-5.518-4.48-9.998-9.997-9.998-5.518 0-9.998 4.48-9.998 9.998 0 5.517 4.48 9.997 9.998 9.997zm0-1.5c-4.69 0-8.498-3.807-8.498-8.497s3.808-8.498 8.498-8.498 8.497 3.808 8.497 8.498-3.807 8.497-8.497 8.497zm4.845-6.711c.108.141.157.3.157.456 0 .389-.306.755-.749.755h-8.501c-.445 0-.75-.367-.75-.755 0-.157.05-.316.159-.457 1.203-1.554 3.252-4.199 4.258-5.498.142-.184.36-.29.592-.29.23 0 .449.107.591.291zm-7.564-.289h5.446l-2.718-3.522z" fill-rule="nonzero"/>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
     </main>
+
     <footer>
       <p>&copy; 2024 Haw Haw Tan Education purpose</p>
     </footer>
