@@ -235,13 +235,12 @@ blockquote {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  /* background-color: var(--white); */
 }
 
 .up-arrow svg {
   width: 2rem;
   height: 2rem;
-  fill: white;
+  fill: var(--white);
 }
 
 /* Homepage media */
@@ -482,23 +481,7 @@ blockquote {
   }
 }
 
-/* form */
-form {
-  max-width: 20rem;
-  margin: 2rem auto;
-}
-
-/* for media */
-fieldset div {
-  padding: 0.5rem;
-}
-
-input[type="submit"] {
-  float: right;
-}
-
 /* table */
-
 /* a better way to move this to the left, (talk about tbody)  help*/
 table {
   margin: 0 auto;
@@ -514,6 +497,55 @@ th,
 td {
   padding: 0.5rem;
   text-align: center;
+}
+
+
+/* Credits */
+
+/* can i overwrite my ul or do i need to make a class? help*/
+.list-of-credits h3{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.list-of-credits section{
+  max-width: 30rem;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+
+.list-of-credits ul{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+
+/* form */
+form {
+  max-width: 20rem;
+  margin: 2rem auto;
+}
+
+/* for media */
+fieldset div {
+  padding: 0.5rem;
+}
+
+input[type="submit"] {
+  float: right;
+}
+
+@media (min-width: 55em) {
+  .list-of-credits ul {
+      gap: 1.2rem;
+  }
+}
+
+/*how to overwrite the arrow help */
+.up-arrow .credits{
+  bottom: 2rem;
 }
 
 /* Footer
