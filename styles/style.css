@@ -28,7 +28,7 @@
   --light_black: rgb(0, 0, 0, 0.3);
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -38,7 +38,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: var(--white);
- 
 }
 
 h1,
@@ -96,25 +95,6 @@ a:focus {
 
 a:active {
 }
-
-@media (min-width: 55em) {
-  .skip {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.skip:focus {
-  position: static;
-  width: auto;
-  height: auto;
-}
-}
-
-/* homepage */
 
 /*--------------------------------------------------------------
 # Layout
@@ -218,7 +198,7 @@ video {
   position: relative;
 }
 
-.introduction {
+h2 {
   font-size: 2rem;
 }
 
@@ -236,7 +216,7 @@ blockquote {
   margin: 2rem 0;
 }
 
-.introduction-img{
+.introduction-img {
   height: 20rem;
   width: 100%;
   border-radius: 20px;
@@ -276,7 +256,7 @@ blockquote {
     padding: 1rem;
   }
 
-  .introduction {
+  h2 {
     text-align: center;
     font-size: 3rem;
   }
@@ -285,14 +265,9 @@ blockquote {
     font-size: 1.2rem;
   }
 
-  .topic {
-    flex-direction: column;
-    padding-top: 2rem;
-  }
-
   /* double check before applying to culture */
   .content-right a,
-  .content-left a{
+  .content-left a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -303,7 +278,7 @@ blockquote {
     font-size: 2rem;
   }
 
-  .content-left a{
+  .content-left a {
     flex-direction: row-reverse;
   }
 
@@ -353,123 +328,168 @@ blockquote {
   background-position: 10%;
 }
 
-.popular {
-  font-size: 2rem;
-}
-
-/* why do i need this? help */
 .list-of-food {
+  max-width: 60rem;
   display: grid;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2rem auto;
   padding-bottom: 1rem;
   position: relative;
+  gap: 2rem 1rem;
 }
 
+.list-of-food figure {
+  margin: 0;
+}
 .list-of-food img {
-  height: 12rem;
-  width: 15rem;
+  /* height: 12rem; */
+  /* width: 15rem; */
   border-radius: 10px;
   object-fit: cover;
-  max-width: none;
+  /* max-width: none; */
 }
 
-@media (min-width: 35em) {
-  .hero-picture h1{
+@media (min-width: 37.5em) {
+  .hero-picture h1 {
     font-size: 3.2rem;
   }
 
-  .popular {
-    text-align: center;
-    font-size: 2rem;
-  }
-  
   .list-of-food {
     grid-template-columns: 1fr 1fr;
     align-content: center;
     padding: 2rem;
-    margin: 2rem;
   }
 
-  figcaption{
+  figcaption {
     font-size: 1.3rem;
   }
 
   .list-of-food img {
-    height: 12rem;
-    width: 14rem;
-    /* border: 3px solid green; */
+    aspect-ratio: 4/3;
+    width: clamp(14rem, 100%, 23rem);
   }
 }
 
 /* food media */
 @media (min-width: 45em) {
-  .hero-picture h1{
+  .hero-picture h1 {
     font-size: 4rem;
-  }
-
-  .popular {
-    font-size: 3rem;
   }
 
   .list-of-food figure {
     justify-self: center;
   }
 
-  .list-of-food img {
-    height: 17rem;
-  }
-
   .up-arrow svg {
     width: 3rem;
     height: 3rem;
   }
-}
 
-@media (min-width: 45em) {
-  .hero-picture h1{
+  .hero-picture h1 {
     font-size: 7rem;
-  }
-  .list-of-food img {
-    width: 18rem;
   }
 }
 
 @media (min-width: 70em) {
   .list-of-food {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
   }
-  .list-of-food img {
-    width: 19rem;
-  }
-}
 
-figcaption{
-  font-size: 1.5rem;
-}
-
-@media (min-width: 85em) {
-  .list-of-food img {
-    height: 21rem;
-    width: 25rem;
+  figcaption {
+    font-size: 1.5rem;
   }
 }
 
 /* culture */
 .culture-hero-picture::after {
-  background: url("../photo/building/kuala-lumpur.jpg");
+  background: url("../photo/scenery/kuala-lumpur.jpg");
   background-size: cover;
   background-position: 30% top;
 }
 
+/* can i use 90rem help */
+.homepage-scenery-wrapper{
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.list-of-scenery {
+  margin: 2rem 0;
+}
+
+.scenery-img {
+  border-radius: 20px;
+}
+
+@media (min-width: 45em) {
+  .list-of-scenery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .scenery-img {
+    width: 20rem;
+    height: 20rem; 
+    object-position: bottom;
+    object-fit: cover;
+  }
+
+  .scenery-right .content,
+  .scenery-left .content {
+    width: 20rem;
+  }
+}
+
+@media (min-width: 50em) {
+  .list-of-scenery {
+    grid-template-columns: 1fr;
+  }
+
+  .scenery-right,
+  .scenery-left {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+  }
+
+  .scenery-left {
+    flex-direction: row-reverse;
+  }
+
+  .scenery-img {
+    width: 22rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 75em) {
+  /* my width help */
+  .scenery-img {
+    width: 33rem;
+    height: 25rem;
+  }
+
+  /* my width help */
+  .scenery-right .content,
+  .scenery-left .content {
+    width: 35rem;
+    align-content: center;
+  }
+
+  .content {
+    font-size: 1.2rem;
+  }
+}
+
 /* form */
-form{
+form {
   max-width: 20rem;
   margin: 2rem auto;
 }
 
 /* for media */
-fieldset div{
+fieldset div {
   padding: 0.5rem;
 }
 
@@ -478,15 +498,20 @@ input[type="submit"] {
 }
 
 /* table */
-table{
+
+/* a better way to move this to the left, (talk about tbody)  help*/
+table {
   margin: 0 auto;
 }
 
-table,th, td {
+table,
+th,
+td {
   border: 1px solid white;
 }
 
-th, td{
+th,
+td {
   padding: 0.5rem;
   text-align: center;
 }
@@ -504,7 +529,6 @@ footer p {
 }
 
 @media (min-width: 40em) {
-
   footer p {
     font-size: 1.3rem;
     padding: 1rem;
