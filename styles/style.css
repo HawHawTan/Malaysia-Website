@@ -274,6 +274,7 @@ blockquote {
   justify-content: center;
   height: 100vh;
   background-color: var(--light_black);
+  align-items: center;
 }
 
 .hero-picture h1 {
@@ -453,7 +454,7 @@ td {
 /* Credits */
 .credits-hero-picture::after
 {
-  background: url(/photo/scenery/Sunset.jpeg);
+  background: url(../photo/scenery/Sunset.jpeg);
   background-size: cover;
   background-position: 42%;
 }
