@@ -64,6 +64,7 @@ p {
 
 /* Elements
 --------------------------------------------- */
+/* do i put the table here help */
 dl {
 }
 
@@ -81,19 +82,16 @@ a {
   font-size: 1rem;
 }
 
+/* need to do help*/
+a:focus,
+a:hover,
+a:active,
 a:visited {
   color: var(--white);
 }
 
-/* need to do */
-a:hover {
-  /* transform: scale(1.2); */
-}
-
 a:focus {
-}
-
-a:active {
+  padding: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -119,27 +117,26 @@ nav {
 
 .twin-tower {
   height: 3.4rem;
-  width: 4rem;
-  /* margin: 0; */
+  width: 3rem;
 }
+
 ul {
   display: flex;
   justify-content: space-around;
   padding: 1rem 0;
   gap: 1rem;
-  /* width: 90%; */
 }
+
 li {
   list-style: none;
 }
 
 @media (min-width: 55em) {
   .twin-tower {
-    height: 5rem;
-    width: 5rem;
-    /* padding: 1rem; */
     margin-top: 1rem;
     margin-left: 4rem;
+    height: 5rem;
+    width: 4rem;
   }
 
   ul {
@@ -148,12 +145,11 @@ li {
   }
 
   nav a {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     transition: all ease-in-out 0.2s;
   }
   nav a:hover {
-    /* font-size: 2rem; */
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: all 0.5s ease-in-out;
   }
 }
@@ -231,18 +227,6 @@ blockquote {
   object-position: bottom;
 }
 
-.up-arrow {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-}
-
-.up-arrow svg {
-  width: 2rem;
-  height: 2rem;
-  fill: var(--white);
-}
-
 /* Homepage media */
 @media (min-width: 55em) {
   .video-with-title {
@@ -252,7 +236,7 @@ blockquote {
   .homepage-wrapper {
     max-width: 60rem;
     margin: 0 auto;
-    padding: 1rem;
+    /* padding: 1rem; */
   }
 
   h2 {
@@ -341,11 +325,8 @@ blockquote {
   margin: 0;
 }
 .list-of-food img {
-  /* height: 12rem; */
-  /* width: 15rem; */
   border-radius: 10px;
   object-fit: cover;
-  /* max-width: none; */
 }
 
 @media (min-width: 37.5em) {
@@ -369,23 +350,14 @@ blockquote {
   }
 }
 
-/* food media */
-@media (min-width: 45em) {
+/* check */
+@media (min-width: 55em) {
   .hero-picture h1 {
-    font-size: 4rem;
+    font-size: 7rem;
   }
 
   .list-of-food figure {
     justify-self: center;
-  }
-
-  .up-arrow svg {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .hero-picture h1 {
-    font-size: 7rem;
   }
 }
 
@@ -400,24 +372,23 @@ blockquote {
   }
 }
 
-/* culture */
-.culture-hero-picture::after {
+/* scenery */
+.scenery-hero-picture.hero-picture::after {
   background: url("../photo/scenery/kuala-lumpur.jpg");
   background-size: cover;
   background-position: 30% top;
 }
 
-/* can i use 90rem help */
-.homepage-scenery-wrapper{
-  max-width: 90rem;
-  margin: 0 auto;
-}
 .list-of-scenery {
   margin: 2rem 0;
 }
 
 .scenery-img {
   border-radius: 20px;
+  height: 15rem;
+  width: 100%;
+  object-position: bottom;
+  object-fit: cover;
 }
 
 @media (min-width: 45em) {
@@ -429,9 +400,7 @@ blockquote {
 
   .scenery-img {
     width: 20rem;
-    height: 20rem; 
-    object-position: bottom;
-    object-fit: cover;
+    height: 20rem;
   }
 
   .scenery-right .content,
@@ -450,6 +419,7 @@ blockquote {
     display: flex;
     justify-content: space-around;
     padding-top: 2rem;
+    gap: 2rem;
   }
 
   .scenery-left {
@@ -462,17 +432,15 @@ blockquote {
   }
 }
 
-@media (min-width: 75em) {
-  /* my width help */
+@media (min-width: 70em) {
   .scenery-img {
-    width: 33rem;
+    width: 30rem;
     height: 25rem;
   }
 
-  /* my width help */
   .scenery-right .content,
   .scenery-left .content {
-    width: 35rem;
+    width: 30rem;
     align-content: center;
   }
 
@@ -482,7 +450,6 @@ blockquote {
 }
 
 /* table */
-/* a better way to move this to the left, (talk about tbody)  help*/
 table {
   margin: 0 auto;
 }
@@ -499,28 +466,22 @@ td {
   text-align: center;
 }
 
-
 /* Credits */
-
-/* can i overwrite my ul or do i need to make a class? help*/
-.list-of-credits h3{
+.list-of-credits h3 {
   margin-top: 2rem;
   text-align: center;
 }
 
-.list-of-credits section{
+.list-of-credits section {
   max-width: 30rem;
   margin: 0 auto;
-  /* text-align: center; */
 }
 
-
-.list-of-credits ul{
+.list-of-credits ul {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
-
 
 /* form */
 form {
@@ -528,24 +489,30 @@ form {
   margin: 2rem auto;
 }
 
-/* for media */
-fieldset div {
-  padding: 0.5rem;
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+label,
+input:not(input[type="submit"]) {
+  width: 100%;
 }
 
 input[type="submit"] {
-  float: right;
+  width: fit-content;
+  align-self: flex-end;
+  margin-top: 1rem;
 }
 
 @media (min-width: 55em) {
   .list-of-credits ul {
-      gap: 1.2rem;
+    gap: 1.2rem;
   }
-}
 
-/*how to overwrite the arrow help */
-.up-arrow .credits{
-  bottom: 2rem;
+  fieldset div {
+    padding: 0.5rem;
+  }
 }
 
 /* Footer
@@ -554,13 +521,37 @@ footer {
   background-color: var(--black);
 }
 
+footer div {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.up-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+}
+
+.up-arrow svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--white);
+}
+
 footer p {
   margin: 0;
   text-align: center;
   font-size: 0.8rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 55em) {
+  .up-arrow svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
   footer p {
     font-size: 1.3rem;
     padding: 1rem;
