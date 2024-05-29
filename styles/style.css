@@ -55,23 +55,13 @@ h1 {
 }
 
 p {
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
 }
 @media (min-width: 40em) {
   h1 {
     font-size: 7rem;
   }
-}
-
-/* Elements
---------------------------------------------- */
-/* do i put the table here help */
-dl {
-}
-
-figure {
-}
-
-table {
 }
 
 /* Links
@@ -82,7 +72,6 @@ a {
   font-size: 1rem;
 }
 
-/* need to do help*/
 a:focus,
 a:hover,
 a:active,
@@ -90,18 +79,15 @@ a:visited {
   color: var(--white);
 }
 
-a:focus {
-  padding: 1rem;
+@media (min-width: 55em) {
+  a:focus {
+    padding: 1rem;
+  }
 }
-
-/*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-
 /* Header
 --------------------------------------------- */
 nav {
@@ -171,7 +157,6 @@ video {
   object-fit: cover;
   object-position: center;
   display: block;
-  /* filter: opacity(.9); */
   overflow: hidden;
   height: 100vh;
 }
@@ -236,7 +221,6 @@ blockquote {
   .homepage-wrapper {
     max-width: 60rem;
     margin: 0 auto;
-    /* padding: 1rem; */
   }
 
   h2 {
@@ -248,7 +232,6 @@ blockquote {
     font-size: 1.2rem;
   }
 
-  /* double check before applying to culture */
   .content-right a,
   .content-left a {
     display: flex;
@@ -286,7 +269,7 @@ blockquote {
 }
 
 /* Food */
-.hero-picture {
+.hero-picture{
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -329,6 +312,7 @@ blockquote {
   object-fit: cover;
 }
 
+/* Food media*/
 @media (min-width: 37.5em) {
   .hero-picture h1 {
     font-size: 3.2rem;
@@ -350,7 +334,6 @@ blockquote {
   }
 }
 
-/* check */
 @media (min-width: 55em) {
   .hero-picture h1 {
     font-size: 7rem;
@@ -373,7 +356,7 @@ blockquote {
 }
 
 /* scenery */
-.scenery-hero-picture.hero-picture::after {
+.scenery-hero-picture::after {
   background: url("../photo/scenery/kuala-lumpur.jpg");
   background-size: cover;
   background-position: 30% top;
@@ -391,6 +374,7 @@ blockquote {
   object-fit: cover;
 }
 
+/* scenery media*/
 @media (min-width: 45em) {
   .list-of-scenery {
     display: grid;
@@ -449,7 +433,7 @@ blockquote {
   }
 }
 
-/* table */
+
 table {
   margin: 0 auto;
 }
@@ -467,9 +451,16 @@ td {
 }
 
 /* Credits */
+.credits-hero-picture::after
+{
+  background: url(/photo/scenery/Sunset.jpeg);
+  background-size: cover;
+  background-position: 42%;
+}
+
 .list-of-credits h3 {
   margin-top: 2rem;
-  text-align: center;
+  font-size: 1.4rem;
 }
 
 .list-of-credits section {
@@ -483,7 +474,10 @@ td {
   margin: 0;
 }
 
-/* form */
+.list-of-credits li{
+  list-style: disc;
+}
+
 form {
   max-width: 20rem;
   margin: 2rem auto;
@@ -505,6 +499,7 @@ input[type="submit"] {
   margin-top: 1rem;
 }
 
+/* Credits media*/
 @media (min-width: 55em) {
   .list-of-credits ul {
     gap: 1.2rem;
@@ -546,6 +541,7 @@ footer p {
   font-size: 0.8rem;
 }
 
+/* Footer media */
 @media (min-width: 55em) {
   .up-arrow svg {
     width: 3rem;
